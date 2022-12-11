@@ -1,0 +1,18 @@
+@import 'styles';
+
+.root {
+  background-color: #F4F5F7;
+  min-height: 100vh;
+  padding: 16px;
+
+  // reset style that got overridden by antd!!!
+  p, h1, h2 {
+    margin-bottom: 0;
+  }
+}
+
+.container {
+  width: 704px;
+  max-width: 100%;
+  margin: 64px auto 0;
+}

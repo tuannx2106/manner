@@ -1,0 +1,33 @@
+@import 'styles';
+@import 'reset';
+
+:root {
+  --white: #fff;
+  --grey-100: #E6E6E6;
+  --grey-200: #D1D1D1;
+  --grey-400: #757575;
+  --grey-500: #5A5A5A;
+  --grey-600: #1D1D1D;
+
+  --font-base: 16px;
+  --font-weight-base: 400;
+  --line-height-base: 1.375;
+  --font-family-base: 'Arial', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  ;
+}
+
+html,
+body {
+  color: var(--grey-600);
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base);
+  font-family: var(--font-family-base);
+}
+
+* {
+  box-sizing: border-box;
+}
