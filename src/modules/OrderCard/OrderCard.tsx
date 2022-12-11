@@ -72,7 +72,7 @@ const Order = () => {
 
         <div className={s.orderTotal}>
           <b>Total:</b>
-          <span className={s.orderTotalPrice}>${Math.round(totalBill * 100) / 100}</span>
+          <span className={s.orderTotalPrice} aria-label="total price">${Math.round(totalBill * 100) / 100}</span>
         </div>
         <Divider />
 
