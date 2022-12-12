@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Button, Card, Form, Input, Result, Select } from 'antd'
 
 import React from 'react'
@@ -8,7 +7,8 @@ import s from './EditOrderPage.module.scss'
 import { useMyOrderStore } from '../../store/useMyOrderStore'
 import { useRouter } from 'next/router'
 
-const YourCart = dynamic(() => import('./components/YourCart'), { ssr: false });
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const YourCart = dynamic(() => import('./components/YourCart'), { ssr: false }) as any;
 
 const Order = () => {
   const router = useRouter()
