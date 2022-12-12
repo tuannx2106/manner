@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Button, Card, Form, Input, Result, Select } from 'antd'
 
 import React from 'react'
-import YourCart from './components/YourCart'
 import dayjs from 'dayjs'
+import dynamic from 'next/dynamic'
 import s from './EditOrderPage.module.scss'
 import { useMyOrderStore } from '../../store/useMyOrderStore'
 import { useRouter } from 'next/router'
+
+const YourCart = dynamic(() => import('./components/YourCart'), { ssr: false });
 
 const Order = () => {
   const router = useRouter()
@@ -27,8 +30,13 @@ const Order = () => {
     <div className={s.root}>
       <div className={s.container}>
         <YourCart />
-
-        <Card style={{ marginTop: 24 }} title="Shipping information">
+        <Card
+          style={{
+            marginTop: 24,
+            overflowX: 'hidden',
+          }}
+          title="Shipping information"
+        >
           <Form
             form={form}
             name="shippingInformation"
