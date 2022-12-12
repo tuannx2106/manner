@@ -8,7 +8,9 @@ import dayjs from 'dayjs'
 dayjs.extend(advancedFormat)
 
 function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const AnyComponent = Component as any
+  return <AnyComponent {...pageProps} />;
 }
 
 export default App;
